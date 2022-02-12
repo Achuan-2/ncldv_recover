@@ -51,7 +51,7 @@ python ${SCRIPTS}/pdfmerge.py -i${PROJECT}/03_score/ -o "merged.pdf" -b False
 
 ### 4、质检
 
-之后进行质检，质检之前需要先把分箱的fa文件移动到03_score文件夹
+质检之前需要先把分箱的fa文件移动到03_score文件夹，方便筛选
 ```bash
 BIN_INPUT=${PROJECT}/00_bins
 ls ${BIN_INPUT} | while read bin_id;do
