@@ -3,6 +3,8 @@
 需要软件
 - [viralrecall](https://github.com/faylward/viralrecall)
 - [metabat2](https://bitbucket.org/berkeleylab/metabat/src/master/)
+- hmmer(conda install hmmer -c bioconda)
+- prodigal(conda install prodigal -c bioconda)
 
 设置环境变量
 ```bash
