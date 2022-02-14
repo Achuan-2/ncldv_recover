@@ -345,4 +345,3 @@ hello，大家好，我是阿巛/Tron，这个视频呢，我会复盘下我失�
 * Schulz, F., Roux, S., Paez-Espino, D. et al. Giant virus diversity and host interactions through global metagenomics. Nature 578, 432–436 (2020). https://doi.org/10.1038/s41586-020-1957-x
 * Moniruzzaman, M., Martinez-Gutierrez, C.A., Weinheimer, A.R. et al. Dynamic genome evolution and complex virocell metabolism of globally-distributed giant viruses. Nat Commun 11, 1710 (2020). https://doi.org/10.1038/s41467-020-15507-2
 
-好啦，这就是这个视频的全部内容了，感谢大家的观看，我们下个视频见
