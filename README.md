@@ -1,4 +1,6 @@
-# NCLDV Recover(第二个失败毕设题目)
+# NCLDV Recover
+
+![宏基因组挖掘 NCLDV 病毒流程图.svg](retrospective/宏基因组挖掘NCLDV病毒流程图.svg "宏基因组挖掘NCLDV病毒流程图")
 ## 一、NCLDV Recover 方法
 需要软件
 - [viralrecall](https://github.com/faylward/viralrecall)
