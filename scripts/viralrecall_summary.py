@@ -24,6 +24,25 @@ import pandas as pd
 import argparse
 
 
+def main():
+
+    # 0. 读取参数
+    # 创建一个ArgumentParser对象，以存储实参信息
+    description = """
+    功能：
+    对viralrecall单个样本不同分箱的结果进行汇总
+    统计每个bin的平均得分，contig数目，总长度，最大contig长度，最小contig长度,makerhit数目
+    """
+    parser = argparse.ArgumentParser(
+        description=description, formatter_class=argparse.RawTextHelpFormatter)
+    # 方法add_argument()添加要解析的命令内容
+    parser.add_argument(
+        '--input', '-i', type=str, help="input_dir: viralrecall result dir", required=True)
+    args = parser.parse_args()  # 读入输入的参数，生成一个列表args
+    work_dir = args.input  # 接着对参数的任何操作，调用命名为xxx的参数方式为args.xxx
+    # 1. 先统计每个bin的平均得分
+    summary(work_dir)
+
 def summary(work_dir):
     table_df = []
     for parent, dirnames, filenames in os.walk(work_dir):
@@ -49,23 +68,7 @@ def summary(work_dir):
     summary_score = pd.DataFrame(table_df)
     summary_score.to_csv(work_dir+"/summary.tsv", sep="\t", index=False)
 
-def main():
-    
-    # 0. 读取参数
-    # 创建一个ArgumentParser对象，以存储实参信息
-    description = """
-    功能：
-    对viralrecall单个样本不同分箱的结果进行汇总
-    统计每个bin的平均得分，contig数目，总长度，最大contig长度，最小contig长度,makerhit数目
-    """
-    parser = argparse.ArgumentParser(description=description,formatter_class=argparse.RawTextHelpFormatter)
-    # 方法add_argument()添加要解析的命令内容
-    parser.add_argument(
-        '--input', '-i',type=str, help="input_dir: viralrecall result dir", required=True)
-    args = parser.parse_args()  # 读入输入的参数，生成一个列表args
-    work_dir = args.input  # 接着对参数的任何操作，调用命名为xxx的参数方式为args.xxx
-    # 1. 先统计每个bin的平均得分
-    summary(work_dir)
+
 
 if __name__ =="__main__":
     main()
